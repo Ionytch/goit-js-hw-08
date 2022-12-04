@@ -23,16 +23,9 @@ galleryContainer.insertAdjacentHTML("beforeend", markup);
 
 
 
+let gallery = new SimpleLightbox('.gallery a');
+gallery.on('show.simplelightbox', function (e) {
+console.log(e);  });
 
-
-galleryContainer.addEventListener("click", selectImage);
-function selectImage(e) {
-    e.preventDefault();
-    console.log(e.target.nodeName);
-    const instance = basicLightbox.create(`
-    <img src="${e.target.dataset.source}" width="800" height="600">`);
-
-    instance.show();
-    
-    
-};
+gallery.on('error.simplelightbox', function (e) {
+console.log(e);  });

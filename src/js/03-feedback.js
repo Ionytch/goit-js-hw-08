@@ -1,7 +1,7 @@
 var _ = require('lodash');
 const feedbackForm = document.querySelector('.feedback-form');
 
-let populateForm()
+// let populateForm()
     const data = JSON.parse(localStorage.getItem('feedback-form-state'));
     const email = document.querySelector('.feedback-form input');
     const message = document.querySelector('.feedback-form textarea');
